@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoClean | Smart Waste Management</title>
+    <meta name="description" content="EcoClean provides residential and commercial waste management, recycling services, and pickup scheduling for cleaner communities.">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --green-50: #f0faf0;
+    --green-100: #d4f0d4;
+    --green-200: #a8e0a8;
+    --green-400: #5cb85c;
+    --green-600: #2e7d32;
+    --green-700: #1b5e20;
+    --green-800: #134018;
+    --earth-50: #fdf8f0;
+    --earth-100: #f5e9cc;
+    --earth-400: #c8a055;
+    --earth-600: #8d6a1f;
+    --leaf-light: #e8f5e9;
+    --bark: #4e342e;
+    --white: #ffffff;
+    --text-dark: #1a2e1a;
+    --text-mid: #3a5a3a;
+    --text-muted: #6a8f6a;
+    --border: #c8e0c8;
+    --shadow: 0 4px 24px rgba(46,125,50,0.10);
+  }
+
+        #faq { background: var(--white); }
+  .faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; margin-top: 3rem; }
+  .faq-item {
+    background: var(--green-50); border: 1px solid var(--border);
+    border-radius: 16px; padding: 1.5rem; cursor: pointer;
+    transition: all 0.2s;
+  }
+  .faq-item:hover { border-color: var(--green-400); background: var(--leaf-light); }
+  .faq-q {
+    display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+    font-weight: 600; font-size: 0.93rem; color: var(--green-800);
+  }
+  .faq-toggle {
+    width: 26px; height: 26px; border-radius: 50%;
+    background: var(--green-100); color: var(--green-600);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1rem; flex-shrink: 0; transition: all 0.25s;
+  }
+  .faq-a { font-size: 0.87rem; color: var(--text-muted); margin-top: 0.8rem; line-height: 1.6; display: none; }
+  .faq-item.open .faq-a { display: block; }
+  .faq-item.open .faq-toggle { background: var(--green-600); color: #fff; transform: rotate(45deg); }
+
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">EcoClean 🌿</div>
+        <ul class="nav-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="schedule.html">Schedule</a></li>
+            <li><a href="about us.html">About Us</a></li>
+            <li><a href="faq.html">FAQs</a></li>
+        </ul>
+    </nav>
+<section id="faq">
+  <div class="section-label">Common Questions</div>
+  <h2>Frequently Asked Questions</h2>
+  <div class="faq-grid" style="margin-top: 3rem;">
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-q">What happens to my recycling after collection? <span class="faq-toggle">+</span></div>
+      <p class="faq-a">Your recyclables are taken to a materials recovery facility where they are sorted, cleaned, and processed into raw materials for manufacturing new products.</p>
+    </div>
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-q">Can I recycle plastic bags? <span class="faq-toggle">+</span></div>
+      <p class="faq-a">Plastic bags are not accepted in kerbside recycling bins as they jam sorting machines. Please return them to supermarket collection points instead.</p>
+    </div>
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-q">How do I dispose of old electronics safely? <span class="faq-toggle">+</span></div>
+      <p class="faq-a">E-waste should never go in household bins. Contact us to schedule a hazardous waste pickup, or visit one of our certified drop-off centres in your area.</p>
+    </div>
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-q">What is composting and how do I start? <span class="faq-toggle">+</span></div>
+      <p class="faq-a">Composting turns organic waste (food scraps, garden clippings) into rich soil amendment. Start with a small bin, add layers of green and brown waste, and turn weekly. We offer free starter kits!</p>
+    </div>
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-q">Do I need to rinse containers before recycling? <span class="faq-toggle">+</span></div>
+      <p class="faq-a">Yes — food contamination can spoil entire loads of recyclables. A quick rinse is all that's needed. Dry containers before placing them in the recycling bin.</p>
+    </div>
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-q">What are common waste management problems for businesses <span class="faq-toggle">+</span></div>
+      <p class="faq-a">Common issues invlude lack of employee training, ineffiecient waste segregation leading to high costs, and failure to comply with regulations.</p>
+    </div>
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-q">What should I do if my bin wasn't collected? <span class="faq-toggle">+</span></div>
+      <p class="faq-a">If your bin was missed, please contact us within 24 hours. We will arrange a re-collection at no extra charge and investigate the issue with our team.</p>
+    </div>
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-q">Is there a fee for hazardous waste disposal? <span class="faq-toggle">+</span></div>
+      <p class="faq-a">Small quantities of household hazardous waste (batteries, bulbs) can be dropped off free of charge. Large quantities or commercial hazardous waste incurs a handling fee.</p>
+    </div>
+  </div>
+</section>
+   <footer id="contact">
+        <div class="footer-grid">
+            <div>
+                <h3>EcoClean</h3>
+                <p>Smart waste management for safer, cleaner communities.</p>
+            </div>
+            <div>
+                <h4>Contact</h4>
+                <p>ecocleansupport@yahoo.com</p>
+                <p>+256 765 657 378</p>
+            </div>
+            <div>
+                <h4>Quick Links</h4>
+                <p><a href="home.html">Home</a></p>
+                <p><a href="services.html">Services</a></p>
+                <p><a href="schedule.html">Schedule</a></p>
+                 <p><a href="about us.html">About Us</a></p>
+                <p><a href="faq.html">FAQs</a></p>
+            </div>
+        </div>
+        <p class="footer-note">&copy; 2026 EcoClean Waste Management. Making the world cleaner, one bin at a time.</p>
+    </footer>
+    <script>
+function toggleFaq(el) {
+  const isOpen = el.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+  if (!isOpen) el.classList.add('open');
+}
+
+function showToast() {
+  const t = document.getElementById('toast');
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 3500);
+}
+</script>
+</body>
+</html>
